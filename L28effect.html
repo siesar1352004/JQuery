@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Effect</title>
+</head>
+<body>
+
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+
+
+
+			$("#clickme-btn").click(function(){
+				$(".square1").html('<i>I am ready to start now</i>').animate({"width":500},5000);
+				$(".square1").html('<i>Ohh, did you click stop botton </i>').animate({"width":100},3000);
+			});
+
+
+			$("#stop-btn").click(function(){
+				$(".square").stop();
+			});
+
+
+			$("st")
+
+
+			$("#dequeue-btn").click(function(){
+				let div5 = $(".square5");
+
+				div5.animate({width:300,height:300},1000);
+				div5.animate({width:200,height:200},1000);
+				div5.queue(function(){
+					div5.css("background-color","steelblue");
+					div5.dequeue();
+				});
+				div5.slideUp(1000);
+				div5.slideDown(1000);
+
+			})
+
+
+		});
+
+
+	</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
